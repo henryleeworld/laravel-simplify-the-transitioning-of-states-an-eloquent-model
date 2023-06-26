@@ -1,4 +1,4 @@
-# Laravel 8 簡化 Eloquent 模型狀態的轉換
+# Laravel 10 簡化 Eloquent 模型狀態的轉換
 
 引入 asantibanez 的 laravel-eloquent-state-machines 套件來擴增簡化 Eloquent 模型狀態的轉換，每個類別都允許您註冊驗證、掛勾以及允許的轉換和狀態，從而使每個狀態機類別當在從一個狀態轉換到下一個狀態時成為唯一的真正來源。
 
@@ -26,8 +26,8 @@ $ php artisan migrate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/yVzLIFs.png)
+![](https://i.imgur.com/un7ArZ7.png)
 > 每個新增的銷售訂單初始狀態是待處理
 
-![](https://i.imgur.com/2mz1hui.png)
+![](https://i.imgur.com/NvwYBsg.png)
 > 處理的人配合實際狀況變更訂單的狀態

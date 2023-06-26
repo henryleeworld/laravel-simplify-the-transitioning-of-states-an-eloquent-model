@@ -25,13 +25,23 @@ return [
             ],
             'status' => 'New Status',
         ],
+        'status' => [
+            'content' => [
+                'approved'      => 'approved',
+                'declined'      => 'declined',
+                'not_available' => 'N/A',
+                'pending'       => 'pending',
+                'processed'     => 'processed',
+            ],
+        ],
         'status_history' => [
             'title'   => 'Status History',
             'content' => [
-                'comments' => 'Comments',
-                'date'     => 'Date',
-                'from'     => 'From',
-                'to'       => 'To',
+                'comments'      => 'Comments',
+                'date'          => 'Date',
+                'from'          => 'From',
+                'not_available' => 'N/A',
+                'to'            => 'To',
             ],
         ],
         'update' => [

@@ -19,19 +19,29 @@ return [
             ],
         ],
         'new' => [
-            'title'  => 'New',
+            'title'  => '新狀態',
             'content' => [
                 'choose_new_status' => '選擇新狀態',
             ],
             'status' => '新狀態',
         ],
+        'status' => [
+            'content' => [
+                'approved'      => '同意',
+                'declined'      => '不同意',
+                'not_available' => '尚未公佈',
+                'pending'       => '待處理',
+                'processed'     => '處理中',
+            ],
+        ],
         'status_history' => [
             'title'   => '狀態歷程',
             'content' => [
-                'comments' => '評論',
-                'date'     => '日期',
-                'from'     => '起始',
-                'to'       => '結束',
+                'comments'      => '評論',
+                'date'          => '日期',
+                'from'          => '起始',
+                'not_available' => '尚未公佈',
+                'to'            => '結束',
             ],
         ],
         'update' => [

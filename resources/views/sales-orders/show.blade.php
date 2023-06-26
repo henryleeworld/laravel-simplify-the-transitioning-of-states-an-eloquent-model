@@ -40,7 +40,7 @@
                         </dt>
                         <dd class="text-sm text-gray-900 col-span-2">
                             <span class="bg-indigo-400 py-1 px-3 text-sm text-white rounded-full">
-                            {{ $salesOrder->status }}
+                            {{ trans('frontend.sales_orders.status.content.' . $salesOrder->status) }}
                             </span>
                         </dd>
                     </div>
@@ -76,7 +76,7 @@
                                 <select name="state" class="border w-full rounded py-2 px-2">
                                     <option value="">{{ trans('frontend.sales_orders.new.content.choose_new_status') }}</option>
                                     @foreach(\App\StateMachines\SalesOrders\StatusStateMachine::STATES as $state)
-                                        <option value="{{ $state }}">{{ $state }}</option>
+                                        <option value="{{ $state }}">{{ trans('frontend.sales_orders.status.content.' . $state) }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -139,13 +139,13 @@
                                 {{ $stateHistory->created_at }}
                             </td>
                             <td class="px-5 py-3 text-sm text-gray-500">
-                                {{ $stateHistory->from ?? 'N/A' }}
+                                {{ trans('frontend.sales_orders.status.content.' . ($stateHistory->from ?? 'not_available')) }}
                             </td>
                             <td class="px-5 py-3 text-sm text-gray-500">
-                                {{ $stateHistory->to }}
+                                {{ trans('frontend.sales_orders.status.content.' . $stateHistory->to) }}
                             </td>
                             <td class="px-5 py-3 text-sm text-gray-500">
-                                {{ $stateHistory->getCustomProperty('comments') ?? 'N/A' }}
+                                {{ $stateHistory->getCustomProperty('comments') ?? trans('frontend.sales_orders.status_history.content.not_available') }}
                             </td>
                         </tr>
                     @endforeach
