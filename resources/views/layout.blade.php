@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ config('app.name') }}</title>
-
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    @vite(['resources/css/app.css'])
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto p-8">
         @yield('content')
     </div>
+    @vite(['resources/js/app.js'])
 </body>
 </html>

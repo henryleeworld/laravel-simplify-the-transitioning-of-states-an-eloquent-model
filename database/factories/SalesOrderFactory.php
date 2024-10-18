@@ -5,6 +5,9 @@ namespace Database\Factories;
 use App\Models\SalesOrder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\SalesOrder>
+ */
 class SalesOrderFactory extends Factory
 {
     /**
@@ -17,13 +20,13 @@ class SalesOrderFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array
+     * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'customer_name' => $this->faker->name,
-            'total' => $this->faker->numberBetween(100, 1000),
+            'customer_name' => fake()->name,
+            'total' => fake()->numberBetween(100, 1000),
         ];
     }
 }

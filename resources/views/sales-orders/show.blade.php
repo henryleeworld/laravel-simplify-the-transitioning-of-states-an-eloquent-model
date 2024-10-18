@@ -5,14 +5,14 @@
         <div class="bg-white shadow">
             <div class="px-4 py-5">
                 <h3 class="text-lg leading-6 font-medium text-gray-900">
-                    {{ trans('frontend.sales_orders.list.title') }}
+                    {{ __('Sales Order Information') }}
                 </h3>
             </div>
             <div class="border-t border-gray-200 sm:p-0">
                 <dl>
                     <div class="py-5 grid grid-cols-3 gap-4 px-6">
                         <dt class="text-sm font-medium text-gray-500">
-                            {{ trans('frontend.sales_orders.list.content.number') }}
+                            {{ __('#Number') }}
                         </dt>
                         <dd class="text-sm text-gray-900 col-span-2">
                             {{ $salesOrder->id }}
@@ -20,7 +20,7 @@
                     </div>
                     <div class="py-5 grid grid-cols-3 gap-4 px-6">
                         <dt class="text-sm font-medium text-gray-500">
-                            {{ trans('frontend.sales_orders.list.content.customer') }}
+                            {{ __('Customer') }}
                         </dt>
                         <dd class="text-sm text-gray-900 col-span-2">
                             {{ $salesOrder->customer_name }}
@@ -28,7 +28,7 @@
                     </div>
                     <div class="py-5 grid grid-cols-3 gap-4 px-6">
                         <dt class="text-sm font-medium text-gray-500">
-                            {{ trans('frontend.sales_orders.list.content.total') }}
+                            {{ __('Total') }}
                         </dt>
                         <dd class="text-sm text-gray-900 col-span-2">
                             $ {{ $salesOrder->total }}
@@ -36,11 +36,11 @@
                     </div>
                     <div class="py-5 grid grid-cols-3 gap-4 px-6">
                         <dt class="text-sm font-medium text-gray-500">
-                            {{ trans('frontend.sales_orders.list.content.status') }}
+                            {{ __('Status') }}
                         </dt>
                         <dd class="text-sm text-gray-900 col-span-2">
                             <span class="bg-indigo-400 py-1 px-3 text-sm text-white rounded-full">
-                            {{ trans('frontend.sales_orders.status.content.' . $salesOrder->status) }}
+                            {{ __($salesOrder->status) }}
                             </span>
                         </dd>
                     </div>
@@ -52,7 +52,7 @@
                     <a
                         href="{{ route('sales-orders.new') }}"
                         class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600">
-                        {{ trans('frontend.sales_orders.new.title') }}
+                        {{ __('New') }}
                     </a>
                 </div>
             </div>
@@ -61,7 +61,7 @@
 
         <div class="space-y-4">
             <h1 class="text-lg font-medium">
-                {{ trans('frontend.sales_orders.update.status') }}
+                {{ __('Update Status') }}
             </h1>
 
             <div class="shadow bg-white rounded-lg p-6">
@@ -70,13 +70,13 @@
                     <div class="grid grid-cols-1 gap-y-6 gap-x-4">
                         <div>
                             <label class="block text-sm font-medium text-gray-700">
-                                {{ trans('frontend.sales_orders.new.status') }}
+                                {{ __('New Status') }}
                             </label>
                             <div class="mt-1 flex rounded-md shadow-sm">
                                 <select name="state" class="border w-full rounded py-2 px-2">
-                                    <option value="">{{ trans('frontend.sales_orders.new.content.choose_new_status') }}</option>
+                                    <option value="">{{ __('Choose New Status') }}</option>
                                     @foreach(\App\StateMachines\SalesOrders\StatusStateMachine::STATES as $state)
-                                        <option value="{{ $state }}">{{ trans('frontend.sales_orders.status.content.' . $state) }}</option>
+                                        <option value="{{ $state }}">{{ __($state) }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -87,7 +87,7 @@
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700">
-                                {{ trans('frontend.sales_orders.update.content.comments') }}
+                                {{ __('Comments') }}
                             </label>
                             <div class="mt-1 flex rounded-md shadow-sm">
                                 <textarea name="comments" rows="5" class="py-2 px-2 border rounded w-full"></textarea>
@@ -98,10 +98,10 @@
                     <div class="pt-5">
                         <div class="flex justify-end">
                             <button type="reset" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700">
-                                {{ trans('frontend.sales_orders.update.content.reset') }}
+                                {{ __('Reset') }}
                             </button>
                             <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600">
-                                {{ trans('frontend.sales_orders.update.content.save') }}
+                                {{ __('Save') }}
                             </button>
                         </div>
                     </div>
@@ -112,23 +112,23 @@
 
         <div class="space-y-4">
             <h1 class="text-lg font-medium">
-                {{ trans('frontend.sales_orders.status_history.title') }}
+                {{ __('Status History') }}
             </h1>
             <div class="shadow border-b border-gray-200">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                     <tr>
                         <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                            {{ trans('frontend.sales_orders.status_history.content.date') }}
+                            {{ __('Date') }}
                         </th>
                         <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                            {{ trans('frontend.sales_orders.status_history.content.from') }}
+                            {{ __('From') }}
                         </th>
                         <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                            {{ trans('frontend.sales_orders.status_history.content.to') }}
+                            {{ __('To') }}
                         </th>
                         <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">
-                            {{ trans('frontend.sales_orders.status_history.content.comments') }}
+                            {{ __('Comments') }}
                         </th>
                     </tr>
                     </thead>
@@ -139,13 +139,13 @@
                                 {{ $stateHistory->created_at }}
                             </td>
                             <td class="px-5 py-3 text-sm text-gray-500">
-                                {{ trans('frontend.sales_orders.status.content.' . ($stateHistory->from ?? 'not_available')) }}
+                                {{ __($stateHistory->from ?? 'N/A') }}
                             </td>
                             <td class="px-5 py-3 text-sm text-gray-500">
-                                {{ trans('frontend.sales_orders.status.content.' . $stateHistory->to) }}
+                                {{ __($stateHistory->to) }}
                             </td>
                             <td class="px-5 py-3 text-sm text-gray-500">
-                                {{ $stateHistory->getCustomProperty('comments') ?? trans('frontend.sales_orders.status_history.content.not_available') }}
+                                {{ $stateHistory->getCustomProperty('comments') ?? __('N/A') }}
                             </td>
                         </tr>
                     @endforeach

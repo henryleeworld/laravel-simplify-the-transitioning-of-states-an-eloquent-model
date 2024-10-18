@@ -1,0 +1,23 @@
+{
+    "#Number": "編號",
+    "approved": "同意",
+    "Choose New Status": "選擇新狀態",
+    "Comments": "評論",
+    "Customer": "客戶",
+    "Date": "日期",
+    "declined": "不同意",
+    "From": "起始",
+    "N/A": "尚未公佈",
+    "New": "新狀態",
+    "New Status": "新狀態",
+    "pending": "待處理",
+    "processed": "處理中",
+    "Reset": "重新設定",
+    "Sales Order Information": "銷售訂單資訊",
+    "Save": "儲存",
+    "Status": "狀態",
+    "Status History": "狀態歷程",
+    "To": "結束",
+    "Total": "總數",
+    "Update Status": "更新狀態"
+}

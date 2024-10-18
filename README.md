@@ -1,4 +1,4 @@
-# Laravel 10 簡化 Eloquent 模型狀態的轉換
+# Laravel 11 簡化 Eloquent 模型狀態的轉換
 
 引入 asantibanez 的 laravel-eloquent-state-machines 套件來擴增簡化 Eloquent 模型狀態的轉換，每個類別都允許您註冊驗證、掛勾以及允許的轉換和狀態，從而使每個狀態機類別當在從一個狀態轉換到下一個狀態時成為唯一的真正來源。
 
@@ -20,14 +20,22 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
+```sh
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/sales-orders/new` 來進行銷售訂單新增。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/un7ArZ7.png)
+![](https://i.imgur.com/6Qd2Ozn.png)
 > 每個新增的銷售訂單初始狀態是待處理
 
-![](https://i.imgur.com/NvwYBsg.png)
+![](https://i.imgur.com/ErOoc1M.png)
 > 處理的人配合實際狀況變更訂單的狀態

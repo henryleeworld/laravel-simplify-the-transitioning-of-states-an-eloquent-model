@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class SalesOrder extends Model
 {
-    use HasFactory;
-    use HasStateMachines;
+    /** @use HasFactory<\Database\Factories\UserFactory> */
+    use HasFactory, HasStateMachines;
 
     public $stateMachines = [
         'status' => StatusStateMachine::class,
